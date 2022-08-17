@@ -25,34 +25,33 @@ The output is `loan_status` column where 0 represents Healthy loans and 1 repres
 
 
 ### III. Stages of Machine Learning:
-1. Data Collection & data processing: using the dataset and splitting it as training set and testing set
-2. Choosing a model- Logistic Regression: To categorize the riskiness of the loans as `high risk` and `healthy loans`,`logistic regression`is selected as        model
-3. Training data: using the model, fitting the trained data
-4. Prediction: using trained model to predict values for testing data
-5. Evaluation: evaluating model's performance by doing the following:
-   - Calculate the accuracy score of the model
-   - Generate a confusion matrix
-   - Generate classification report
-6. Resampling Training Data: Oversampling the traning data as it is imbalanced data, by using `RandomOverSampler`
-7. Train, Test & Evaluate the model with Resampled data: after this evaluation metrics is generated for `LogisticRegression` model
+1. Data collection and processing involve dividing the dataset into a training set and a testing set.
+2. Choosing a model: Logistic regression is used as the model to classify the riskiness of the loans as "high risk" and "healthy loans."
+3. Training data: fitting the trained data using the model.
+4. Making predictions using a trained model to test data
+5. Evaluation: Assess the performance of the model by performing the following:
+- Create a confusion matrix;
+- Determine the model's accuracy score;
+- Create a classification report.
+6. Resampling Training Data: Using "RandomOverSampler," oversample the training data since it is unbalanced.
+7. After training, testing, and evaluating the model using resampled data, evaluation metrics for the "LogisticRegression" model are produced.
 
 
 ## IV. Results
 
 The models are evaluated using accuracy, precision, and recall. The precision and recall values represent the label of interest
 
-* Machine Learning Model 1: Linear Regression Model with Original training data
+Model 1 for Machine Learning: Linear Regression Using Initial Training Data
 
-  * Accuracy: 0.95 (95%) given by balanced accuracy score, which indicates 95% of the predicted values are correct
-  * Precision: For 0 label, the precision is 1 which indicates that the model is very good in identifying healthy loans and all healthy loans are correctly identified under label 0. For 1 label, the precision is 0.85(85%)which indicates that 85% of the values that the model predicted as high-risk are correct
-  * Recall: For Label 1, the recall is 0.91(91%) which means of all the actual high risk loans(support value of 1 label is 619) the model rightly labelled 91% of them as high-risk. For label 0, the recall is 0.99 which inndicates that 99% of the values are rightly labelled
+* According to the balanced accuracy score, 95% of the anticipated values are accurate, or accuracy: 0.95 (95%)
+* Precision: For a label of 0, the precision is 1, meaning that all healthy loans are accurately identified under label 0. This shows that the model is highly good at recognizing healthy loans. The precision for one label is 0.85(85%), meaning that 85% of the values the model predicted as high-risk are accurate.
+* Recall: For Label 1, the recall is 0.91 (91%), meaning that the model correctly identified 91% of the real high-risk loans (the support value for 1 label is 619) as such. Recall for label 0 is 0.99, meaning that 99% of the values are accurate.
 
+Machine Learning Model 2: Linear Regression Model with Oversampled training data
 
-* Machine Learning Model 2: Linear Regression Model with Oversampled training data
-
-  * Accuracy: 0.99 (99%) given by balanced accuracy score, which indicates 99% of the predicted values are correct
-  * Precision: For 0 label, the precision is 1 which indicates that the model is very good in identifying healthy loans and all healthy loans are correctly identified under label 0. For 1 label, the precision is 0.84(84%)which indicates that 84% of the values that the model predicted as high-risk are correct
-  * Recall: For Label 1, the recall is 0.99(99%) which means of all the actual high risk loans(support value of 1 label is 619) the model rightly labelled 99% of them as high-risk. For label 0, the recall is 0.99 which inndicates that 99% of the values are rightly labelled
+* Accuracy: A balanced accuracy score of 0.99 (99%) suggests that 99% of the anticipated values are accurate.
+* Precision: For a label of 0, the precision is 1, meaning that all healthy loans are accurately identified under label 0. This shows that the model is highly good at recognizing healthy loans. The precision for 1 label is 0.84 (84%) meaning that 84% of the values the model predicted as high-risk are accurate.
+* Recall: For Label 1, the recall is 0.99 (99%), meaning that the model correctly identified 99% of the real high-risk loans (the support value for 1 label is 619) as such. Recall for label 0 is 0.99, meaning that 99% of the data are correctly labeled.
   
 
 ## V. Summary
